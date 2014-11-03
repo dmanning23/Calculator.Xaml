@@ -12,6 +12,7 @@ namespace Calculator
 
 		public OldMainPage()
 		{
+            this.Title = "OldMainPage";
 			Grid layout = new Grid {
 				Padding = new Thickness(5,0),
 				RowSpacing = 1,

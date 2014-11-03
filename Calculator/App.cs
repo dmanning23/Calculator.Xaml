@@ -6,8 +6,16 @@ namespace Calculator
     public class App
     {
         public static Page GetMainPage()
-        {    
-			return new MainPage();
+        {
+            TabbedPage page = new TabbedPage();
+            page.Children.Add(new NavigationPage(new FirstPage())
+            {
+                Title="Nav"
+            });
+            page.Children.Add(new OldMainPage());
+            page.Children.Add(new MainPage());
+
+            return page;
         }
     }
 }
